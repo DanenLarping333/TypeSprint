@@ -4,6 +4,8 @@ A quiet typing practice app with a charcoal and mint interface. Runs locally wit
 ## Open
 Extract the whole ZIP into one folder and open index.html in a modern browser. Keep app.js, core.js and style.css beside it.
 
+Link:https://danenlarping333.github.io/TypeSprint/
+
 ## Modes
 - Time: 15 / 30 / 60 / 120 seconds.
 - Words: 10 / 25 / 50 / 100 words.
