@@ -1,0 +1,10 @@
+const assert=require('node:assert/strict');
+const c=require('./core.js');
+for(const count of [10,25,50,100,1000])for(const flags of [[false,false],[true,true]])assert.equal(c.generate(count,...flags).split(' ').length,count);
+assert.equal(c.normalize('  hello\n world\t '),'hello world');
+assert.throws(()=>c.normalize('  '));assert.throws(()=>c.normalize('hello 🌟'));assert.throws(()=>c.normalize('a'.repeat(4001)));
+const m=c.metrics('hello','hello',6,1,30);
+assert.equal(m.wpm,2);assert.equal(m.raw,2.4);assert.equal(m.correct,5);assert.ok(Math.abs(m.accuracy-83.333333)<.001);
+assert.equal(c.metrics('hello','hxllo',5,1,60).wpm,.8);
+assert.equal(c.metrics('','',0,0,0).wpm,0);
+console.log('Passed: generated lengths, passage validation, corrected-error accuracy and WPM.');

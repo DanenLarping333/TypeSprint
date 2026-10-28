@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A quiet place to practice typing. Five modes, live feedback and local personal bests."><title>TypeSprint — Find your rhythm</title><link rel="stylesheet" href="style.css"></head>
+<body><main>
+<header><a class="brand" href="./index.html"><span class="mark">//</span> TypeSprint<span class="tag">TYPING PRACTICE</span></a><span class="local"><i></i> On your device</span></header>
+<section class="intro"><p class="eyebrow">LESS NOISE. MORE FLOW.</p><h1>Find your rhythm.</h1><p>A little faster. A little more precise.</p></section>
+<nav id="modes" aria-label="Practice mode"><button data-mode="time">Time</button><button data-mode="words">Words</button><button data-mode="quote">Quote</button><button data-mode="zen">Zen</button><button data-mode="custom">Custom</button></nav>
+<div class="options"><div id="toggles"><button id="punctuation" aria-pressed="false">, . &nbsp; Punctuation</button><button id="numbers" aria-pressed="false">123 &nbsp; Numbers</button></div><p id="mode-note" hidden></p><div id="presets" aria-label="Test length"></div><button id="edit" hidden>Edit passage ↗</button></div>
+<section class="practice" aria-label="Typing practice">
+<div class="status"><span id="state-label">ENGLISH / PRACTICE</span><div><strong id="clock">30s</strong><span id="live-wpm">0 wpm</span></div></div><div class="track"><div id="progress"></div></div>
+<div id="typing-zone"><div id="passage" aria-hidden="true"></div><label class="sr" for="input">Type the displayed passage. The first character starts the test.</label><textarea id="input" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" aria-describedby="hint"></textarea><div id="focus-hint">Click here to type</div></div>
+<p id="hint">Start typing to begin. Accuracy first, speed follows.</p>
+<div id="results" hidden aria-live="polite"><p class="eyebrow">SESSION COMPLETE</p><div class="metrics"><div><strong id="result-wpm"></strong><span>words / minute</span></div><div><strong id="accuracy"></strong><span>accuracy</span></div><div><strong id="raw"></strong><span>raw wpm</span></div></div><p id="details"></p><p id="best"></p></div>
+<div class="actions"><button id="restart" title="Restart (Escape)">↻ &nbsp; Restart</button><button id="finish" hidden>Finish session →</button></div>
+</section><footer><span><kbd>esc</kbd> restart <span class="separator">/</span> <kbd>backspace</kbd> correct</span><span>No account. No uploads. Just practice.</span></footer><p id="notice" role="status"></p>
+</main>
+<dialog id="custom-dialog"><form id="custom-form"><div class="dialog-top"><span class="eyebrow">CUSTOM PRACTICE</span><button type="button" id="close" aria-label="Close">×</button></div><h2>Make it your own.</h2><p>Paste a passage you want to get better at typing.</p><div class="field-heading"><label for="custom-text">YOUR PASSAGE</label><span id="count">0 / 4,000</span></div><textarea id="custom-text" maxlength="4000" spellcheck="false" placeholder="A small step forward is still a step forward…"></textarea><p id="custom-error" role="alert"></p><p class="help">English / ASCII · Line breaks become spaces</p><div class="dialog-bottom"><span>Kept for this session only</span><button type="button" id="cancel">Cancel</button><button class="primary" type="submit">Use passage →</button></div></form></dialog>
+<script src="core.js"></script><script src="app.js"></script></body></html>
